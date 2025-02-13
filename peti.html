@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magyar Édességek – Kalandok a Sütemények Tengerében</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #444;
+        }
+        header {
+            background-color: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .announcement-bar {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            animation: slideIn 10s ease-in-out infinite;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .navbar {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content-section {
+            padding: 30px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+        .content-section h2 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 24px;
+        }
+        .content-section p {
+            line-height: 1.8;
+            text-align: center;
+            font-size: 18px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #ecf0f1;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        ul li:hover {
+            transform: translateY(-5px);
+            background-color: #3498db;
+            color: white;
+        }
+        footer {
+            background-color: #2c3e50;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .more-info-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .more-info-btn:hover {
+            background-color: #d35400;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Magyar Édességek – Kalandok a Sütemények Tengerében
+    </header>
+
+    <div class="announcement-bar">
+        Fedezd fel Magyarország legfinomabb süteményeit, és kóstold meg a hagyományokat!
+    </div>
+
+    <div class="navbar">
+        <a href="#home" onclick="showPage('home')">Kezdőlap</a>
+        <a href="#about" onclick="showPage('about')">Rólunk</a>
+        <a href="#desserts" onclick="showPage('desserts')">Sütemények</a>
+        <a href="#blog" onclick="showPage('blog')">Blog</a>
+        <a href="#contact" onclick="showPage('contact')">Kapcsolat</a>
+    </div>
+
+    <div id="home" class="page active">
+        <div class="content-section">
+            <h2>Üdvözlünk a Magyar Édességek Világában!</h2>
+            <p>Az édes élmények országában jársz! A magyar édességek híre világszerte eljutott, és most itt az ideje, hogy te is részese legyél ennek az édes kalandnak. Tudd meg, melyek azok a sütemények, amelyek Magyarországra jellemzőek, és próbáld ki őket! Készen állsz? Vágj bele!</p>
+            <div class="more-info-btn" onclick="showPage('desserts')">Ismerd meg süteményeinket!</div>
+        </div>
+    </div>
+
+    <div id="about" class="page">
+        <div class="content-section">
+            <h2>Rólunk</h2>
+            <p>Mi a Magyar Édességek csapata vagyunk, és küldetésünk, hogy bemutassuk a legfinomabb magyar süteményeket a világ minden táján. Célunk, hogy megőrizzük a hagyományokat, miközben új, modern ízeket is bemutatunk. Szeretnénk, ha mindenki számára elérhetővé tennénk ezeket a finomságokat.</p>
+            <p>Ha te is szereted a süteményeket és a hagyományokat, akkor itt a helyed nálunk!</p>
+        </div>
+    </div>
+
+    <div id="desserts" class="page">
+        <div class="content-section">
+            <h2>Legfinomabb Süteményeink</h2>
+            <p>Magyarország legkedveltebb süteményei közül válogattunk. Az alábbiakban megtalálhatod a legismertebb édességeinket, amelyeket minden magyar családban szeretnek!</p>
+            <ul>
+                <li><strong>Dobos Torta</strong>: Egy klasszikus, karamellizált cukorral borított torta, amely a magyar cukrászat egyik ékköve.</li>
+                <li><strong>Kürtőskalács</strong>: Az utcai édességek királya. Karamellizált, ropogós tészta, amit kívül-belül díszítettek különböző ízekkel.</li>
+                <li><strong>Rigó Jancsi</strong>: Csokoládés, krémes finomság, amely az édesszájúak kedvence. Minden falat egy igazi élvezet!</li>
+                <li><strong>Piskóta Torta</strong>: Egy könnyű és lágy piskótából készült torta, tejszínhabbal és gyümölcsökkel díszítve.</li>
+                <li><strong>Eszterházy Torta</strong>: Egy mandulás, vaníliás krémmel töltött finomság, amely a magyar sütemények igazi különlegessége.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="blog" class="page">
+        <div class="content-section">
+            <h2>Blog – Sütemények Története</h2>
+            <p>Itt találhatod meg a legfrissebb cikkeket a magyar édességek történetéről, tippeket a sütemények elkészítéséhez, és egyéb izgalmas információkat a cukrászat világából!</p>
+            <div class="more-info-btn">Olvasd el blogunkat!</div>
+        </div>
+    </div>
+
+    <div id="contact" class="page">
+        <div class="content-section">
+            <h2>Kapcsolat</h2>
+            <p>Ha bármilyen kérdésed van, vagy érdeklődni szeretnél termékeinkről, bátran vedd fel velünk a kapcsolatot!</p>
+            <p>Email: info@magyaressedesek.hu</p>
+            <p>Telefon: +36 1 234 5678</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Magyar Édességek. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
