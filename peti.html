@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magyar Édességek – Kalandok a Sütemények Tengerében</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        /* Alapértelmezett stílusok */
+        html, body {
+            height: 100%;
             margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
             background-color: #f7f7f7;
             color: #444;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #2c3e50;
@@ -54,6 +59,7 @@
             text-decoration: underline;
         }
         .content-section {
+            flex: 1; /* Az elem kitölti a maradék helyet */
             padding: 30px;
             margin: 20px 0;
             background-color: white;
@@ -94,8 +100,8 @@
             text-align: center;
             color: white;
             font-size: 16px;
+            margin-top: auto; /* A footer mindig az oldal alján marad */
         }
-
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -106,7 +112,6 @@
                 transform: translateY(0);
             }
         }
-
         .more-info-btn {
             display: inline-block;
             padding: 10px 20px;
@@ -121,11 +126,9 @@
         .more-info-btn:hover {
             background-color: #d35400;
         }
-
         .page {
             display: none;
         }
-
         .page.active {
             display: block;
         }
@@ -209,4 +212,3 @@
     </script>
 </body>
 </html>
-
